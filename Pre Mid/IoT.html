@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Arduino Exercise </title>
+	<script src="jqeury.min"></script>
+</head>
+<style>
+	button{
+		font-size: 20em;
+	}
+</style>
+<body>
+	<button id="on"> On Light </button>
+	<button id="off"> Off Light </button>
+	<button id="blink">Blink ! </button>
+</body>
+</head>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$("#on").click(function(){
+			$.ajax('/on');
+		});
+
+		$("off").click(function(){
+			$.ajax('/off');
+		});
+
+		$("blink").click(function(){
+			$.ajax('/off');
+		});
+	});
+
+</script>
